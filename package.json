@@ -1,6 +1,6 @@
 {
   "name": "h3",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Tiny JavaScript Server",
   "repository": "unjs/h3",
   "license": "MIT",
@@ -17,8 +17,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "unbuild",
@@ -28,8 +27,7 @@
     "play": "listhen ./playground/app.ts",
     "profile": "0x -o -D .profile -P 'autocannon -c 100 -p 10 -d 40 http://localhost:$PORT' ./playground/server.cjs",
     "release": "pnpm test && pnpm build && changelogen --release && pnpm publish && git push --follow-tags",
-    "test": "pnpm lint && vitest run --coverage",
-    "postinstall": "npm run build"
+    "test": "pnpm lint && vitest run --coverage"
   },
   "dependencies": {
     "cookie-es": "^1.0.0",
